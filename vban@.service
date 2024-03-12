@@ -1,6 +1,7 @@
 [Unit]
 Description=VBAN manager server #%i
-After=network.target
+Wants=network-online.target
+After=network-online.target
 
 [Service]
 ExecStart=/bin/sh /var/www/html/script/vban.sh start-service %i
